@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- STYLES AND FONTS -->
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://use.typekit.net/ohf5dtv.css">
+<link rel="stylesheet" href="glider.min.css">
+
+<!-- SHOELACE ELEMENTS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css" />
+<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/components/tooltip/tooltip.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/components/input/input.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/shoelace.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/components/icon-button/icon-button.js"></script>
+ 
+<title>Republic of Fremantle</title>
+</head>
+
+<body>
+
+  <!--------------------Navigation----------------------->
+     <input type="checkbox" id="active"> <!-- Trigger -->
+     <label for="active" class="menu-btn"><sl-icon name="list"></sl-icon></label>
+     <div class="wrapper">
+       <ul class="menu">
+         <li><a href="#row1">STORY</a></li>
+         <li><a href="#row2">DISTILLERY+</a></li>
+         <li><a href="#row3">LEARN+</a></li>
+         <li><a href="#row5">VISIT</a></li>
+         <li><a href="#row6">CONTACT</a></li>
+       </ul>
+     </div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="logo-container">
+        <div class="logo" onclick="finish()"> <!-- Reloads page -->
+          <img src="images/republic of freo white.png" alt="Republic Logo">
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#gin">GIN</a></li>
+        <li><a href="#vodka">VODKA</a></li>
+        <li><a href="#shop">SHOP</a></li>
+        <li><a href="#about">ABOUT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Signature Vodka Section -->
+<section class="section signature-vodka" id="vodka">
+    <div class="text-content">
+        <h1 id="first">SIGNATURE</h1>
+        <h1 id="second">VODKA .</h1>
+    </div>
+
+    <div class="vodkaImage">
+      <img src="images/vodka_blue.png">
+    </div>
+
+<!-- SHOELACE TOOLTIP -->
+    <div class="btns">
+      <div class="btn1">
+        <sl-tooltip trigger="hover" class="btn-info" placement="bottom" style="--sl-tooltip-arrow-size: 0;" distance="50"> <!-- SHOELACE TOOLTIP -->
+          <div slot="content">BROWSE</div>
+          <sl-button circle class="btn-icon"><i class="fa-solid fa-circle" style="color: #f5f5f5;"></i></sl-button> <!-- BUTTON shoelace component -->
+        </sl-tooltip>  
+      </div>
+
+
+    <div class="description1">
+        <div class="subsection">
+            <h2>MIX WITH</h2>
+              <div class="drink-icons">
+                <img src="images/rocks.png">
+                <img src="images/cocktail.png">
+                <img src="images/poco.png">
+              </div>
+            <p>Pair effortlessly with tonic for a crisp, refreshing profile.
+              <span>Perfect for martinis, mules, and more —our vodka elevates every drink.</p>
+        </div>
+
+        <div class="subsection">
+            <h2>INGREDIENTS</h2>
+            <p>Hints of citrus and honeydew melon, 
+              whilst the finish has a remarkably clean character.</p>
+        </div>
+
+        <div class="information">
+          <h2>750ml Bottle  |  8% ABV  |  4.7 Standard drinks</h2>
+        </div>
+
+      </div>
+    </div>
+</section>
+
+<!-- Limited Release Negroni Section -->
+<section class="section limited-negroni" id="negroni">
+    <div class="text-content">
+        <h1>LIMITED RELEASE BARREL<span>AGED NEGRONI 2024</span></h1>
+        <p>Meet the Negroni Classico, a ready-to-pour bottled cocktail house made by the Republic of Fremantle bar team. 
+           Best enjoyed in the company of great friends or family. The Negroni Classico features Republic of Fremantle Full Bodied Gin,
+           Campari and a house vermouth blend. The addition of Cascara and Wattleseed brings extra complexity and depth of flavour,
+           whilst highlighting the red fruit and spice notes in the gin.</p>
+    </div>
+
+    <div class="negroniGlass">
+      <img src="images/negroniglass.png">
+    </div>
+
+    <!-- SHOELACE TOOLTIP FOR POPUPS -->
+
+    <div class="btns">
+      <div class="btn2">
+        <sl-tooltip trigger="hover" class="btn-info" placement="bottom" style="--sl-tooltip-arrow-size: 0;" distance="50"> <!-- SHOELACE TOOLTIP -->
+          <div slot="content">Full Bodied Gin, Campari and a house vermouth blend</div>
+          <sl-button circle class="btn-icon"><i class="fa-solid fa-circle" style="color: #f5f5f5;"></i></sl-button> <!-- BUTTON shoelace component -->
+        </sl-tooltip>  
+      </div>
+
+      <div class="btns">
+        <div class="btn3">
+          <sl-tooltip trigger="hover" class="btn-info" placement="right" style="--sl-tooltip-arrow-size: 0;" distance="50">
+            <sl-button circle class="btn-icon"><i class="fa-solid fa-circle" style="color: #f5f5f5;"></i></sl-button> 
+          </sl-tooltip>  
+        </div>
+</section>
+
+<!-- Collection Section -->
+<section class="section collection" id="collection">
+    <h2>COLLECTION +</h2>
+
+<!-- Carousel -->
+<!-- GLIDER.JS -->
+<div class="glider-contain multiple">
+  <div class="glider">
+
+          <figure>
+            <img src="images/bottle1.png" alt="Tip 1">
+          </figure>
+
+          <figure>
+            <img src="images/bottle2.png" alt="Tip 2">
+          </figure>
+
+          <figure>
+            <img src="images/bottle3.png" alt="Tip 3">
+          </figure>
+
+          <figure>
+            <img src="images/bottle4.png" alt="Tip 4">
+          </figure>
+
+          <figure>
+            <img src="images/bottle5.png" alt="Tip 5">
+          </figure>
+
+          <figure>
+              <img src="images/bottle1.png" alt="Tip 1">
+            </figure>
+
+            <figure>
+              <img src="images/bottle2.png" alt="Tip 2">
+            </figure>
+
+            <figure>
+              <img src="images/bottle3.png" alt="Tip 3">
+            </figure>
+
+            <figure>
+              <img src="images/bottle4.png" alt="Tip 4">
+            </figure>
+
+            <figure>
+              <img src="images/bottle5.png" alt="Tip 5">
+            </figure>
+            
+        </div>
+
+      <div id="dots" class="glider-dots"></div>
+  </div>
+</section>
+
+
+
+</div>
+
+<!-- Bar + Kitchen Section -->
+<!-- GSAP SCROLL TRIGGER -->
+  <section class="comparisonSection">
+    <div class="comparisonImage beforeImage">
+      <img src="images/page1.png" alt="before">
+    </div>
+    <div class="comparisonImage afterImage">
+      <img src="images/page2.png" alt="after">
+    </div>
+  </section>
+
+<!-- Join the Republic Section -->
+<section class="section join-republic" id="join">
+    <h2>JOIN THE REPUBLIC</h2>
+
+
+<!-- SHOELACE FORM SETUP -->
+<sl-input class="label-on-left" label="NAME"></sl-input>
+<sl-input class="label-on-left" label="EMAIL" type="email"></sl-input>
+<sl-textarea class="label-on-left" label="MESSAGE"></sl-textarea>
+
+
+<!-- SHOELACE FORM STYLING -->
+<style>
+  .label-on-left {
+    --label-width: 3.75rem;
+    --gap-width: 1rem;
+  }
+
+  .label-on-left + .label-on-left {
+    margin-top: var(--sl-spacing-medium);
+  }
+
+  .label-on-left::part(form-control) {
+    display: grid;
+    grid: auto / var(--label-width) 1fr;
+    gap: var(--sl-spacing-3x-small) var(--gap-width);
+    align-items: center;
+  }
+
+  .label-on-left::part(form-control-label) {
+    text-align: right;
+  }
+
+  .label-on-left::part(form-control-help-text) {
+    grid-column-start: 2;
+  }
+</style>
+
+<sl-button class="signup" size="large" pill>SIGN UP</sl-button>
+
+<div class="social-media">
+  <sl-icon-button name= "instagram" label="Instagram" href="https://www.instagram.com/republic_of_fremantle/?hl=en" target="_blank"></sl-icon-button>
+  <sl-icon-button name= "facebook" label="facebook" href="https://www.facebook.com/RepublicofFremantleDistillery/" target="_blank"></sl-icon-button>
+</div>
+
+</section>
+
+<!-- IMPORTED SCRIPTS -->
+ <!-- Shoelace -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/components/tooltip/tooltip.js"></script>
+
+<!-- GSAP Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
+
+<!-- Glider Script -->
+  <script src="glider.min.js"></script>
+
+<!-- Own Script ON BOTTOM ALWAYS --> 
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

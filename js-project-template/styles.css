@@ -1,0 +1,450 @@
+@import 'https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/themes/dark.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #ffffff;
+  background-color: #000000;
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*******************************Navigation Configuration************************************/
+.wrapper { /* Nestles the Navigation */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; /* Ensure dropdown is on top */
+  height: 100%;
+  width: 100%;
+  background: #bbbba5;
+  clip-path: circle(1px at 50px 50px);
+  transition: all 0.5s ease-in-out;
+}
+
+#active:checked ~ .wrapper {
+  clip-path: circle(75%);
+}
+
+.menu-btn {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 10000;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 50px;
+  cursor: pointer;
+  display: flex; /* Center content within the button */
+  align-items: center; /* Vertically center icon */
+  justify-content: center; /* Horizontally center icon */
+  transition: all 0.3s ease;
+}
+
+sl-icon {
+  font-size: inherit; /* Ensures icon size matches the font size set in .menu-btn */
+}
+
+.wrapper ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+
+.wrapper ul li {
+  margin: 45px 0;
+}
+
+.wrapper ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 50px;
+  font-weight: 500;
+  padding: 5px 50px;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+
+.wrapper ul li a:after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Center the underline */
+  width: 70%; /* Set width to 70% for a longer underline */
+  height: 4px;
+  bottom: 0;
+  background-color: #ffffff;
+  transform: translateX(-50%) scaleX(0); /* Center and start with scaleX(0) */
+  z-index: -1;
+  transition: transform 0.25s ease-out;
+}
+
+.wrapper ul li a:hover::after {
+  transform: translateX(-50%) scaleX(1); /* Expand the underline on hover without shifting */
+}
+
+.wrapper ul li a:hover {
+  color: #ffffff;
+}
+
+input {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+  margin-top: -22px;
+  gap: 2px; /* Adjusts the space between the logo and the icon */
+}
+
+.logo img {
+  width: 300px; 
+  height: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin-right: 80px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  position: relative; /* Needed for positioning the underline */
+  padding-bottom: 5px; /* Space between text and underline */
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Center the underline */
+  width: 80%; /* Set underline width to 80% */
+  height: 2px;
+  bottom: 0;
+  background-color: #ffffff;
+  transform: translateX(-50%) scaleX(0); /* Center and start at scaleX(0) */
+  transition: transform 0.25s ease-out;
+}
+
+.nav-links a:hover {
+  color: #bbbba5; /* Change color on hover */
+}
+
+.nav-links a:hover::after {
+  transform: translateX(-50%) scaleX(1); /* Expand the underline on hover */
+}
+
+header {
+  margin-bottom: 150px;
+}
+
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#vodka {
+  margin-bottom: 200px;
+}
+
+#vodka h1 {
+  font-size: 18em;
+  font-family: "am-tripoli", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#first {
+  margin-left: 400px;
+}
+
+.text-content h1 {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 200px;
+}
+
+.vodkaImage {
+  position: absolute;
+  z-index: 100;
+  left: 46%;
+  top: 10%;
+}
+
+/* BUTTON */
+.btn1 { /* btn1 PROPERTIES (position + animation) */
+  position: absolute;
+  z-index: 999999;
+  margin: auto;
+  left: 70%;
+  top: 105vh;
+  animation: bounce 2.5s ease-in-out infinite;
+}
+
+
+
+/* CSS parts > selector of whatever it's called, then two columns (::), then write PART, then in brackets (the name of the part) */
+.btn-info::part(body) { /* PROPERTIES of SL tooltip lable */
+  color:#000000;
+  padding: 20px 50px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  font-size: 20px;
+}
+
+.btn-icon::part(base) { /* PROPERTIES of SL button */
+  border: 2px solid #000000;
+  outline-style: solid;
+  outline-color: white;
+  font-size: 51px;
+  width: 60px;
+  height: 60px;
+}
+
+.signature-vodka, .limited-negroni {
+  background-color: #000000;
+}
+
+.description1 {
+  text-align: left;
+  margin-left: 200px;
+}
+
+.subsection {
+  margin: 20px;
+  margin-bottom: 50px;
+}
+
+.subsection h2 {
+  font-size: 30px;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-bottom: 30px;
+}
+
+.drink-icons {
+  margin-top: -50px;
+  margin-bottom: 30px;
+}
+
+.drink-icons img {
+  scale: 70%;
+}
+
+.subsection p {
+  font-size: 25px;
+}
+
+p span {
+  display: block;
+}
+
+.information {
+  margin-left: 25px;
+}
+
+#negroni {
+  margin-bottom: 110vh;
+  background: none; /* removes background color */
+}
+
+.section limited-negroni {
+  justify-content: left;
+}
+
+#negroni h1 {
+  font-size: 6em;
+  line-height: 1.1em;
+}
+
+#negroni p {
+  font-size: 25px;
+  margin-left: 45%;
+  margin-top: 10vh;
+  text-align: justify;
+  text-justify: inter-word;
+  max-width: 40%;
+}
+
+.negroniGlass {
+  z-index: -1; /* Ensure the image stays behind the text */
+  width: 100%; /* Set the width of the image to 100% of the viewport height */
+  height: auto; /* Automatically scale the height to maintain the aspect ratio */
+  position: absolute;
+  top: 155vh;
+}
+
+.negroniGlass img {
+  width: 100%;
+  height: auto;
+}
+
+/* BUTTON */
+.btn2 { 
+  position: absolute;
+  z-index: 999999;
+  margin: auto;
+  top: 250vh;
+  left: 75vh;
+  animation: bounce 2.5s ease-in-out infinite;
+}
+
+.btn3 { 
+  position: absolute;
+  z-index: 999999;
+  margin: auto;
+  top: 225vh;
+  left: 147vh;
+  animation: bounce 2.5s ease-in-out infinite;
+}
+
+#collection {
+  margin-bottom: 20vh;
+}
+
+#collection h2 {
+  font-size: 6em;
+  text-align: left;
+  margin-left: 200px;
+  margin-bottom: 5vh;
+}
+
+#bar-kitchen {
+  margin-bottom: 10vh;
+}
+
+/* CAROUSEL */
+
+figure {
+  display: block;
+  margin: .2em;
+  padding: .1em;
+}
+
+.glider-contain {
+  width: 85% !important;
+}
+
+.product-item {
+  background-color: #222;
+  padding: 20px;
+  width: 150px;
+  text-align: center;
+}
+
+/* SLIDING NAVIGATION SCROLLTRIGGER */
+
+.comparisonSection {
+  position: relative;
+  padding-bottom: 56.25%; /* to maintain aspect ratio */
+}
+.comparisonImage {
+  width: 100%;
+  height: 100%;
+}
+.afterImage {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  transform: translate(100%, 0px);
+}
+.afterImage img {
+  transform: translate(-100%, 0px);
+}
+.comparisonImage img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+
+#join {
+  position:relative;
+  margin-top: 10vh;
+  margin-bottom: 20vh;
+}
+
+.join-republic {
+  background-color: #000000;
+}
+
+#join h2 {
+  font-size: 6em;
+  text-align: left;
+  margin-left: 16vh;
+  margin-bottom: 20px;
+}
+
+.label-on-left {
+  max-width: 45%;
+  margin-left: 10vh;
+}
+
+.signup {
+    position: relative;
+    text-align: left;
+    margin-top: 4vh;
+    margin-right: 145vh;
+  }
+  
+  #join sl-button::part(base) {
+    padding: 10px 50px;
+    background-color: #000000;
+    outline: white solid 2px;
+  }
+  
+  #join sl-button::part(base) {
+    color: rgb(255, 255, 255);
+  }
+
+  .social-media {
+    display: flex;
+    flex-direction: column;
+    position: absolute; 
+    right: 200px; /* Adjust this value to control the distance from the right edge */
+    top: 21vh; /* Adjust this value to control the starting distance from the top */
+    gap: 30px; /* Adds space between icons */
+  }
+
+  sl-icon-button::part(base) {
+    font-size: 80px;
+    color: #ffffff;
+  }
